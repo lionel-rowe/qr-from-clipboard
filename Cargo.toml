@@ -1,0 +1,12 @@
+[package]
+name = "qr-from-clipboard"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+win32_notif = "0.15.2"
+clipboard-rs = "0.3.4"
+rxing = { version = "0.9", features = ["image_formats"] }
+regex = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
