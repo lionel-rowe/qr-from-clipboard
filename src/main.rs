@@ -11,6 +11,7 @@ use win32_notif::{
         ActionButton,
     },
     notification::visual::{text::HintStyle, Text},
+    notification::Scenario,
     notifier::ToastsNotifier,
     NotificationActivatedEventHandler, NotificationBuilder,
 };
@@ -82,6 +83,7 @@ impl ClipboardHandler for ClipboardToastHandler {
 
         let mut builder = NotificationBuilder::new()
             .with_use_button_style(true)
+            .with_scenario(Scenario::Urgent)
             .visual(
                 Text::create(0, "QR code detected")
                     .with_style(HintStyle::Title)
